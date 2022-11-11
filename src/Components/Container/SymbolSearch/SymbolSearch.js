@@ -1,17 +1,17 @@
 import React from "react";
-// import {useState} from 'react'
-// import axios from "axios";
+import './SymbolSearch.css'
 
 function SymbolSearch (props) {
     //when search button is pressed, stock symbols appear
     return (
-        <div>
-            <form onSubmit={(e) => {
+        <div className='Symbol-search'>
+            <form className='Symbol-form' onSubmit={(e) => {
                 e.preventDefault()
                 props.handleSubmit()
             }}>
-                <label>Symbol:</label>
-                <input onChange={props.handleChange} type='text'></input>
+                <label className='Symbol-label'>Symbol:</label>
+                <input className='Symbol-input' onChange={props.handleChange} type='text'></input>
+                <button className='Symbol-button'>🔎</button>
             </form>
         </div>
     )

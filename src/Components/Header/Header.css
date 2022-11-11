@@ -1,0 +1,14 @@
+.Nav {
+    display: flex;
+    align-items: cetner;
+    flex-direction: column;
+    background-color: rgb(0, 144, 186);
+}
+.Nav-title {
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font: inherit;
+    color: white;
+    font-weight: bold;
+}

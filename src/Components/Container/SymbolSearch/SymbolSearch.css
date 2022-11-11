@@ -1,0 +1,19 @@
+.Symbol-search {
+    border: 2px solid purple;
+    display: flex;
+}
+.Symbol-form {
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.Symbol-label {
+    margin-right: 10px;
+}
+.Symbol-input {
+    width: 100px;
+}
+.Symbol-button {
+    background-color: transparent;
+    border: none;
+}

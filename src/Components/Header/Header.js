@@ -1,12 +1,15 @@
 import React from "react";
 import Container from "../Container/Container";
+import './Header.css'
 
 
 function Header () {
  return (
-   <div>
-      <nav className='Nav-title'>Stock Series</nav>
-      <Container />
+  <div>
+      <div className='Nav'>
+          <nav className='Nav-title'>Stock Series</nav>
+      </div>
+   <Container />
    </div>
  )
 }
