@@ -2,16 +2,16 @@ import React from "react";
 import './KeyData.css'
 
 
-function KeyData () {
+function KeyData ({keyData}) {
     return (
         <div className='KeyData-section'>
             <div className='KeyData-title'>
-                <p>Key Data:</p>
+                <p>Key Data: {keyData.Name}</p>
             </div>
             <div id='Key-data'>
                 <div className='Sector-industry'>
-                    <p>Sector:</p>
-                    <p>Industry:</p>
+                    <p>Sector: {keyData.Sector}</p>
+                    <p>Industry: {keyData.Industry}</p>
                 </div>
                 <div className='Price-Volumne'>
                     <p>High/Low:</p>

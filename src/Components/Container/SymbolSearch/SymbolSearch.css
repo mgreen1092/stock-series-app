@@ -1,6 +1,7 @@
 .Symbol-search {
     border: 2px solid purple;
     display: flex;
+    flex-direction: column;
 }
 .Symbol-form {
     margin: 0 auto;
@@ -16,4 +17,13 @@
 .Symbol-button {
     background-color: transparent;
     border: none;
+}
+.Symbol-form2 {
+    margin: 0 auto;
+}
+.Symbol-drop {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.Symbol-option {
 }
