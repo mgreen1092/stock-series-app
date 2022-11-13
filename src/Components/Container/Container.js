@@ -15,7 +15,7 @@ function Container () {
         //Obtains symbol and company name based on the input from SymbolSearch
         let inputKey = input.toLowerCase()
         axios.get(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${inputKey}&apikey=L9CIXKF2CPVF19PV`).then((response) => {
-            console.log(response.data.bestMatches)
+            console.log(response.data.bestMatches[0]['1. symbol'])
             //how can I get symbols and names??
             let bestMatches = response.data.bestMatches
             console.log(bestMatches, 'best matches')
