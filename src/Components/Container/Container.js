@@ -6,6 +6,8 @@ import KeyData from "./KeyData/KeyData";
 
 
 function Container () {
+    let displayBestMatches
+    let displayNames
     const [input, setInput] = useState('')
     function handleChange (e) {
         //obtains text input value of SymbolSearch
@@ -15,13 +17,16 @@ function Container () {
         //Obtains symbol and company name based on the input from SymbolSearch
         let inputKey = input.toLowerCase()
         axios.get(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${inputKey}&apikey=L9CIXKF2CPVF19PV`).then((response) => {
-            console.log(response.data.bestMatches[0]['1. symbol'])
-            //how can I get symbols and names??
+            //console.log(response.data.bestMatches[0]['1. symbol'])
             let bestMatches = response.data.bestMatches
-            console.log(bestMatches, 'best matches')
-            //let displayBestMatches = bestMatches.map((bestMatch)=> {
-                //symbol: bestMatch.1. symbol
-            //})
+            //console.log(bestMatches, 'best matches')
+            displayBestMatches = bestMatches.map((bestMatch)=> {
+                console.log(bestMatch['1. symbol'])
+            
+            })
+            displayNames = bestMatches.map((bestMatch) => {
+                console.log(bestMatch['2. name'])
+            })
         })
     }
 
@@ -31,10 +36,9 @@ function Container () {
 
         })
     }
-    //console.log(input)
     return (
         <div>
-            <SymbolSearch handleSubmit={handleSubmit} handleChange={handleChange} input={input} setInput={setInput}/>
+            <SymbolSearch displayBestMatches={displayBestMatches} displayNames={displayNames} handleSubmit={handleSubmit} handleChange={handleChange} input={input} setInput={setInput}/>
             <KeyData />
         </div>
     )
