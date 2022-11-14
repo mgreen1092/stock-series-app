@@ -3,12 +3,14 @@ import { useState } from "react";
 import axios from "axios";
 import SymbolSearch from "./SymbolSearch/SymbolSearch";
 import KeyData from "./KeyData/KeyData";
+import Articles from "./Articles/Articles";
 
 function Container () {
     const [name, setName] = useState([])
     const [input, setInput] = useState('')
     const [keyData, setKeyData] = useState({})
     const [values, setValues] = useState({})
+    const [articles, setArticles] = useState([])
     const handleChange = (e) => {
         e.preventDefault()
         console.log(e.target.value)
@@ -51,10 +53,17 @@ function Container () {
     //     console.log(response.data)
     // })
     // }
+    function getNewsArticles (key) {
+        axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${key}&apikey=L9CIXKF2CPVF19PV`).then((response) => {
+            console.log(response.data)
+            setArticles(response.data.feed)
+        })
+    }
     return (
         <div>
             <SymbolSearch getKeyData={getKeyData} name={name} handleChange={handleChange} input={input}/>
-            <KeyData keyData={keyData}/>
+            <KeyData keyData={keyData} getNewsArticles={getNewsArticles}/>
+            <Articles articles={articles} getNewsArticles={getNewsArticles}/>
         </div>
     )
 }

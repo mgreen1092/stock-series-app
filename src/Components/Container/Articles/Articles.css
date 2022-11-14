@@ -1,0 +1,19 @@
+.Container {
+    width: 300px;
+    height: 100px;
+    background-Color: lightblue;
+    /* display: flex; */
+    overflow-y: scroll;
+    border: 2px solid black;
+    color: purple;
+    /* margin-left: 50px;
+    margin-right: 50px; */
+    /* scroll-snap-type: y mandatory; */
+}
+/* .Container div {
+    width: 10rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-weight: bold;
+} */

@@ -6,23 +6,23 @@ function KeyData ({keyData}) {
     return (
         <div className='KeyData-section'>
             <div className='KeyData-title'>
-                <p>Key Data: {keyData.Name}</p>
+                <p><span className='ID'>Key Data:</span> {keyData.Name}</p>
             </div>
             <div className='KeyData-description'>
-                <p>Description: {keyData.Description}</p>
+                <p><span className='ID'>Description:</span> {keyData.Description}</p>
             </div>
             <div id='Key-data'>
                 <div className='Sector-industry'>
-                    <p>Exchange: {keyData.Exchange}</p>
-                    <p>Sector: {keyData.Sector}</p>
-                    <p>Industry: {keyData.Industry}</p>
+                    <p><span className='ID'>Exchange:</span> {keyData.Exchange}</p>
+                    <p><span className='ID'>Sector:</span> {keyData.Sector}</p>
+                    <p><span className='ID'>Industry:</span> {keyData.Industry}</p>
                 </div>
                 <div className='Price-Volumne'>
-                    <p>High/Low:</p>
-                    <p>Volume:</p>
+                    <p><span className='ID'>High/Low:</span></p>
+                    <p><span className='ID'>Volume:</span></p>
                     {/* <p>52 Week High: {keyData.52WeekHigh}</p>
                     <p>52 Week Low: {keyData.52WeekLow}</p> */}
-                    <p>Earnings per share: {keyData.EPS}</p>
+                    <p><span className='ID'>Earnings per share:</span> {keyData.EPS}</p>
                 </div>
             </div>
         </div>
