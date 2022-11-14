@@ -6,14 +6,22 @@
 .KeyData-title {
     border: 2px solid blue;
     margin: 0 auto;
+    margin-left: 50px;
 
 }
 #Key-data {
     border: 2px solid purple;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     display: flex;
     flex-direction: row;
+    margin-left: 50px;
+    margin-right: 50px;
 
+}
+.KeyData-description {
+    border: 2px solid red;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 .Sector-industry {
     margin-right: 100px;

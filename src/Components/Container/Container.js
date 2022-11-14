@@ -8,21 +8,22 @@ function Container () {
     const [name, setName] = useState([])
     const [input, setInput] = useState('')
     const [keyData, setKeyData] = useState({})
+    const [values, setValues] = useState({})
     const handleChange = (e) => {
+        e.preventDefault()
         console.log(e.target.value)
         //obtains text input value of SymbolSearch
         setInput(e.target.value)
         //Obtains symbol and company name based on the input from SymbolSearch
-        let inputKey = input.toLowerCase()
+        let inputKey = e.target.value.toLowerCase()
         axios.get(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${inputKey}&apikey=L9CIXKF2CPVF19PV`).then((response) => {
         let bestMatches = response.data.bestMatches
         console.log(bestMatches, 'best matches')
         let displayNames = bestMatches?.filter((bestMatch) => {
+            //when accessing key data - we can't have periods in the symbol
             return !bestMatch['1. symbol'].includes('.')
-            // if (!bestMatch['1. symbol'].includes('.')) {
-                //return bestMatch['2. name'] + ' | ' + bestMatch['1. symbol']  
         })
-        let newDropDown = displayNames.map((displayName) => {
+        let newDropDown = displayNames?.map((displayName) => {
             return displayName['2. name'] + ' | ' + displayName['1. symbol']
         })
         setName(newDropDown)
@@ -30,9 +31,6 @@ function Container () {
         console.log(name)
     }
     console.log(input)
-    function handleSubmit (e) {
-        e.preventDefault()
-    }
 
     function getKeyData (key) {
         console.log(key)
@@ -43,9 +41,19 @@ function Container () {
             setKeyData(response.data)
         })
     }
+    // function getValues (key) {
+    //     let date = new Date()
+    //     let year = date.toLocaleString("default", {year: "numeric"})
+    //     let month = date.toLocaleString("default", {month: "2-digit"})
+    //     let day = date.toLocaleString("default", {day: "2-digit"})
+    //     let formattedDate = year + '-' + month + '-' + day
+    //     axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${key}&apikey=demo`).then((response) => {
+    //     console.log(response.data)
+    // })
+    // }
     return (
         <div>
-            <SymbolSearch getKeyData={getKeyData} name={name} handleSubmit={handleSubmit} handleChange={handleChange} input={input}/>
+            <SymbolSearch getKeyData={getKeyData} name={name} handleChange={handleChange} input={input}/>
             <KeyData keyData={keyData}/>
         </div>
     )

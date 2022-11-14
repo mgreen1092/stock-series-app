@@ -13,21 +13,18 @@ function SymbolSearch (props) {
     //when search button is pressed, stock symbols appear
     return (
         <div className='Symbol-search'>
-            <form className='Symbol-form' onSubmit={(e) => {
-                e.preventDefault()
-                props.handleSubmit()
-            }}>
-                <label className='Symbol-label'>Symbol:</label>
-                <input className='Symbol-input' onChange={props.handleChange} value={props.input} type='text'></input>
-                <button className='Symbol-button'>🔎</button>
-            </form>
+            <form className='Symbol-form'>
+            <label className='Symbol-label'>Symbol:</label>
+            <input className='Symbol-input' onChange={props.handleChange} value={props.input} type='text'></input>
+            <button className='Symbol-button'>🔎</button>
+        </form>
             <form className='Symbol-form2'>
                 <select onChange={handleChange} className='Symbol-drop'>
                     <option className='First-option'>---------</option>
                     {props.name?.map((oneName) => {
-                        return (
-                            <option className='Symbol-option'>{oneName}</option>
-                        )
+                    return (
+                        <option className='Symbol-option'>{oneName}</option>
+                    )
                     })}
                 </select>
             </form>
@@ -35,3 +32,24 @@ function SymbolSearch (props) {
     )
 }
 export default SymbolSearch
+
+
+
+
+{/* <div className='Symbol-search'>
+<form className='Symbol-form' onSubmit={(e) => {
+    e.preventDefault()
+    props.handleSubmit()
+}}>
+    <label className='Symbol-label'>Symbol:</label>
+    <input list='stock-option' className='Symbol-input' onChange={props.handleChange} value={props.input} type='search'></input>
+        <datalist id='stock-option' onChange={handleChange}>
+            <option className='First-option'>---------</option>
+            {props.name?.map((oneName) => {
+                return (
+                    <option className='Symbol-option'>{oneName}</option>
+                )
+            })}
+    </datalist>
+</form>
+</div> */}
