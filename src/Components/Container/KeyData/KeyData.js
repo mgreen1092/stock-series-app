@@ -6,7 +6,7 @@ function KeyData ({keyData}) {
     return (
         <div className='KeyData-section'>
             <div className='KeyData-title'>
-                <p><span className='ID'>Key Data:</span> {keyData.Name}</p>
+                <h2><span className='ID'>Key Data:</span> {keyData.Name}</h2>
             </div>
             <div className='KeyData-description'>
                 <p><span className='ID'>Description:</span> {keyData.Description}</p>
@@ -17,7 +17,7 @@ function KeyData ({keyData}) {
                     <p><span className='ID'>Sector:</span> {keyData.Sector}</p>
                     <p><span className='ID'>Industry:</span> {keyData.Industry}</p>
                 </div>
-                <div className='Price-Volumne'>
+                <div className='Price-Volume'>
                     <p><span className='ID'>High/Low:</span></p>
                     <p><span className='ID'>Volume:</span></p>
                     {/* <p>52 Week High: {keyData.52WeekHigh}</p>

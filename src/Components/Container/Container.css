@@ -1,0 +1,13 @@
+.Container-div {
+    display: flex;
+    /* flex-direction: row; */
+    flex-direction: row;
+}
+.KeyData-Articles {
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    /* color: purple; */
+}
+.Articles {
+    flex-direction: row;
+}

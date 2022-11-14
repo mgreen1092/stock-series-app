@@ -4,6 +4,7 @@ import axios from "axios";
 import SymbolSearch from "./SymbolSearch/SymbolSearch";
 import KeyData from "./KeyData/KeyData";
 import Articles from "./Articles/Articles";
+import './Container.css'
 
 function Container () {
     const [name, setName] = useState([])
@@ -61,9 +62,13 @@ function Container () {
     }
     return (
         <div>
-            <SymbolSearch getKeyData={getKeyData} name={name} handleChange={handleChange} input={input}/>
-            <KeyData keyData={keyData} getNewsArticles={getNewsArticles}/>
-            <Articles articles={articles} getNewsArticles={getNewsArticles}/>
+            <SymbolSearch getNewsArticles={getNewsArticles} getKeyData={getKeyData} name={name} handleChange={handleChange} input={input}/>
+            <div className='Container-div'>
+                <div className='KeyData-Articles'>
+                    <KeyData keyData={keyData}/>
+                    <Articles articles={articles} getNewsArticles={getNewsArticles}/>
+                </div>
+            </div>
         </div>
     )
 }

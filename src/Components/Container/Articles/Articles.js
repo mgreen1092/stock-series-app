@@ -4,7 +4,8 @@ import './Articles.css'
 function Articles (props) {
     return (
         <div className='Article-section'>
-                {props.articles.map((article) => {
+            <h2 className='Article-title'>News Feed:</h2>
+                {props.articles?.map((article) => {
                     return (
                         <container className='Container'>
                             <div>Title: <a href={article.url}>{article.title}</a></div>

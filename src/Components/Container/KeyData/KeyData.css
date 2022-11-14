@@ -1,16 +1,16 @@
 .KeyData-section {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     display: flex;
     flex-direction: column;
 }
 .KeyData-title {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     margin: 0 auto;
     margin-left: 50px;
 
 }
 #Key-data {
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     /* margin: 0 auto; */
     display: flex;
     flex-direction: row;
@@ -19,16 +19,17 @@
 
 }
 .KeyData-description {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin-left: 50px;
     margin-right: 50px;
 }
 .Sector-industry {
     margin-right: 100px;
 }
-.Price-volume {
-    margin-right: 500px;
-    color: blue;
+.Price-Volume {
+    /* margin-right: 100px; */
+    margin-left: 100px;
+    /* color: blue; */
 }
 .ID {
     font-weight: bold;

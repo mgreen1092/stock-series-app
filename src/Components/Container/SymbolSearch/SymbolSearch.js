@@ -17,7 +17,6 @@ function SymbolSearch (props) {
             <form className='Symbol-form'>
             <label className='Symbol-label'>Symbol:</label>
             <input className='Symbol-input' onChange={props.handleChange} value={props.input} type='text'></input>
-            <button className='Symbol-button'>🔎</button>
         </form>
             <form className='Symbol-form2'>
                 <select onChange={handleChange} className='Symbol-drop'>
