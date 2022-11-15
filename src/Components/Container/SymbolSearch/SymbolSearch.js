@@ -6,7 +6,7 @@ function SymbolSearch (props) {
     const handleChange = (e) => {
         console.log(e.target.value)
         props.getKeyData(e.target.value)
-        props.getValues(e.target.value)
+        //props.getValues(e.target.value)
         props.getNewsArticles(e.target.value)
         }
     return (
