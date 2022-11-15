@@ -13,8 +13,20 @@
   margin-left: 50px;
   margin-right: 50px;
   border: 2px solid black;
+  margin-bottom: 20px;
 }
-
-.Article-title {
-    /* margin-left: 50px; */
+.Article-content {
+    margin-left: 10px;
+}
+a:link{
+    color: black;
+}
+a:hover{
+    font-weight: bold;
+}
+a:visited{
+    color: black;
+}
+#Font {
+    font-weight: bold;
 }
