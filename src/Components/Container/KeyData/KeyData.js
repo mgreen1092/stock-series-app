@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './KeyData.css'
 
 
-function KeyData ({keyData, values}) {
+function KeyData ({keyData}) {
+    useEffect(() => {
+
+    }, [keyData])
     return (
         <div className='KeyData-section'>
             <div className='KeyData-title'>
