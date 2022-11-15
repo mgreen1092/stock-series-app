@@ -11,30 +11,6 @@ function Container () {
     const [input, setInput] = useState('')
     const [keyData, setKeyData] = useState({})
     const [articles, setArticles] = useState([])
-    const handleChange = (e) => {
-        e.preventDefault()
-        console.log(e.target.value)
-        //obtains text input value of SymbolSearch
-        setInput(e.target.value)
-        //Obtains symbol and company name based on the input from SymbolSearch
-        //let inputKey = e.target.value.toLowerCase()
-        axios.get(`https://api.polygon.io/v3/reference/tickers?active=true&apiKey=yQnhLxouu8Eo81nORx2a7bfCviPQyq6u`).then((response) => {
-        console.log(response.data.results)
-        let bestMatches = response.data.results
-        console.log(bestMatches, 'best matches')
-        let displayNames = bestMatches?.filter((bestMatch) => {
-            //when accessing key data - we can't have periods in the symbol
-            return !bestMatch['1. symbol'].includes('.')
-        })
-        let newDropDown = displayNames?.map((displayName) => {
-            return displayName.name + ' | ' + displayName.ticker
-        })
-        setName(newDropDown)
-        })
-        console.log(name)
-    }
-    console.log(input)
-
     function getKeyData (key) {
         console.log(key)
         //need to interpolate the symbol name selected - where IBM is now
@@ -90,7 +66,7 @@ function Container () {
     //     }
     return (
         <div>
-            <SymbolSearch getValues={getValues} getKeyData={getKeyData} name={name} handleChange={handleChange} input={input}/>
+            <SymbolSearch getValues={getValues} getKeyData={getKeyData} input={input}/>
             <KeyData keyData={keyData}/>
             <Articles articles={articles}/>
         </div>
