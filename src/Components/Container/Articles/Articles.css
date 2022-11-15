@@ -1,22 +1,20 @@
-.Container {
-    width: 300px;
-    height: 100px;
-    background-Color: lightblue;
-    /* display: flex; */
-    overflow-y: scroll;
-    border: 2px solid black;
-    color: purple;
-    /* margin-left: 50px;
-    margin-right: 50px; */
-    /* scroll-snap-type: y mandatory; */
-}
-/* .Container div {
-    width: 10rem;
+.Article-section {
     display: flex;
-    justify-content: left;
-    align-items: center;
-    font-weight: bold;
-} */
-.Article-title {
+}
+.News-feed {
     margin-left: 50px;
+    /* margin-right: 50px; */
+}
+.Article-section {
+    display: flex;
+    flex-direction: row;
+}
+.Container {
+  margin-left: 50px;
+  margin-right: 50px;
+  border: 2px solid black;
+}
+
+.Article-title {
+    /* margin-left: 50px; */
 }
