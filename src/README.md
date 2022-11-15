@@ -30,9 +30,13 @@
 
 ### Time Frames:
 
-| Component | Description                                                              |
-| --------- | ------------------------------------------------------------------------ |
-| App       | Contains the header, make the initial data pull and include React Router |
+| Component        | Priority | Estimated Time | Time Invested | Actual Time |
+| ---------------- | -------- | -------------- | ------------- | ----------- |
+| Working with API | H        | 3 hours        | 4 hours       | 4 hours     |
+| Search Bar       | H        | 1.5 hours      | 1 hour        | 1 hour      |
+| Graph            | M        | 2 hours        |               |             |
+| Articles         | M        | 2 hours        | 1 hour        | 1 hour      |
+| Key data         | H        | 3 hours        | 3 hours       | 3 hours     |
 
 ### Code Snippet:
 
