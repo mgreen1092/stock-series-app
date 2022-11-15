@@ -2,7 +2,7 @@
 
 ### Wireframe and React Componenet Hierarchy
 
-- [Wireframe] (https://res.cloudinary.com/dhwx7jnjx/image/upload/v1668543047/FullSizeRender_vyj6lu.jpg)
+- [Wireframe](https://res.cloudinary.com/dhwx7jnjx/image/upload/v1668543047/FullSizeRender_vyj6lu.jpg)
 
 - [Component Hierarchy](https://res.cloudinary.com/dhwx7jnjx/image/upload/v1668543038/FullSizeRender_dbp5du.jpg)
 
