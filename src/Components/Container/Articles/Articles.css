@@ -1,22 +1,25 @@
-.Article-section {
-    display: flex;
-}
 .News-feed {
     margin-left: 50px;
     /* margin-right: 50px; */
 }
 .Article-section {
+    /* display: flex; */
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .Container {
-  margin-left: 50px;
-  margin-right: 50px;
-  border: 2px solid black;
-  margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 40%;
 }
 .Article-content {
     margin-left: 10px;
+    margin-right: 10px;
 }
 a:link{
     color: black;
