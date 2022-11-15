@@ -12,8 +12,8 @@
 #Key-data {
     /* border: 2px solid purple; */
     /* margin: 0 auto; */
-    display: flex;
-    flex-direction: row;
+    /* display: flex; */
+    /* flex-direction: row; */
     margin-left: 50px;
     margin-right: 50px;
 
@@ -28,7 +28,7 @@
 }
 .Price-Volume {
     /* margin-right: 100px; */
-    margin-left: 100px;
+    margin-left: 0px;
     /* color: blue; */
 }
 .ID {

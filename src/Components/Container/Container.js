@@ -10,7 +10,6 @@ function Container () {
     const [name, setName] = useState([])
     const [input, setInput] = useState('')
     const [keyData, setKeyData] = useState({})
-    const [values, setValues] = useState({})
     const [articles, setArticles] = useState([])
     const handleChange = (e) => {
         e.preventDefault()
@@ -42,31 +41,54 @@ function Container () {
             console.log(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${key}&apikey=L9CIXKF2CPVF19PV`)
             console.log(response.data)
             setKeyData(response.data)
+            console.log(keyData)
+            getValues(keyData)
+            getNewsArticles(keyData)
         })
     }
-    // function getValues (key) {
-    //     let date = new Date()
-    //     let year = date.toLocaleString("default", {year: "numeric"})
-    //     let month = date.toLocaleString("default", {month: "2-digit"})
-    //     let day = date.toLocaleString("default", {day: "2-digit"})
-    //     let formattedDate = year + '-' + month + '-' + day
-    //     axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${key}&apikey=demo`).then((response) => {
-    //     console.log(response.data)
-    // })
-    // }
-    function getNewsArticles (key) {
-        axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${key}&apikey=L9CIXKF2CPVF19PV`).then((response) => {
+    console.log(keyData)
+    function isWeekend (date = new Date()) {
+        return date.getDay() === 6 || date.getDay()===0
+    }
+    function getValues () {
+        let date = new Date()
+        date.setDate(date.getDate()-5)
+        let weekend = isWeekend(date)
+        if (weekend === true) {
+            date.setDate(date.getDate()-3)
+        }
+        let year = date.toLocaleString("default", {year: "numeric"})
+        let month = date.toLocaleString("default", {month: "2-digit"})
+        let day = date.toLocaleString("default", {day: "2-digit"})
+        let formattedDate = year + '-' + month + '-' + day
+        console.log(formattedDate)
+        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${keyData.Symbol}&apikey=L9CIXKF2CPVF19PV.`).then((response) => {
+        console.log(keyData)
+        console.log()
+        console.log(response.data)
+        setKeyData({ ...keyData,
+            high: response.data['Time Series (Daily)'][formattedDate]['2. high'],
+            low: response.data['Time Series (Daily)'][formattedDate]['3. low'],
+            volume: response.data['Time Series (Daily)'][formattedDate]['6. volume']
+        })
+        //response.data['Time Series (Daily)']
+    })
+    }
+    function getNewsArticles () {
+        axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${keyData.Symbol}&apikey=L9CIXKF2CPVF19PV`).then((response) => {
             console.log(response.data)
-            setArticles(response.data.feed)
+            setKeyData(response.data.feed)
         })
     }
     return (
         <div>
-            <SymbolSearch getNewsArticles={getNewsArticles} getKeyData={getKeyData} name={name} handleChange={handleChange} input={input}/>
+            <SymbolSearch getValues={getValues} getKeyData={getKeyData} name={name} handleChange={handleChange} input={input}/>
             <div className='Container-div'>
                 <div className='KeyData-Articles'>
                     <KeyData keyData={keyData}/>
-                    <Articles articles={articles} getNewsArticles={getNewsArticles}/>
+                </div>
+                <div className='Articles'>
+                    <Articles articles={articles}/>
                 </div>
             </div>
         </div>
@@ -74,3 +96,5 @@ function Container () {
 }
 
 export default Container
+
+//aapl

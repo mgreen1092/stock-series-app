@@ -1,13 +1,17 @@
+body {
+    font: arial;
+}
 .Container-div {
-    display: flex;
+    /* display: flex; */
     /* flex-direction: row; */
-    flex-direction: row;
+    /* flex-direction: row; */
+    /* color: blue; */
 }
 .KeyData-Articles {
-    flex-direction: row;
+    /* flex-direction: row; */
     /* flex-wrap: wrap; */
     /* color: purple; */
 }
 .Articles {
-    flex-direction: row;
+    /* flex-direction: row; */
 }

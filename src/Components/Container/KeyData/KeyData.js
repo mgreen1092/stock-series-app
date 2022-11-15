@@ -2,7 +2,7 @@ import React from "react";
 import './KeyData.css'
 
 
-function KeyData ({keyData}) {
+function KeyData ({keyData, values}) {
     return (
         <div className='KeyData-section'>
             <div className='KeyData-title'>
@@ -18,8 +18,8 @@ function KeyData ({keyData}) {
                     <p><span className='ID'>Industry:</span> {keyData.Industry}</p>
                 </div>
                 <div className='Price-Volume'>
-                    <p><span className='ID'>High/Low:</span></p>
-                    <p><span className='ID'>Volume:</span></p>
+                    <p><span className='ID'>High/Low:</span> {keyData.high}/{keyData.low}</p>
+                    <p><span className='ID'>Volume:</span> {keyData.volume}</p>
                     {/* <p>52 Week High: {keyData.52WeekHigh}</p>
                     <p>52 Week Low: {keyData.52WeekLow}</p> */}
                     <p><span className='ID'>Earnings per share:</span> {keyData.EPS}</p>

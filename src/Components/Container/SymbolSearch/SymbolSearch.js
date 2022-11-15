@@ -1,3 +1,4 @@
+import { getValue } from "@testing-library/user-event/dist/utils";
 import React from "react";
 import './SymbolSearch.css'
 
@@ -7,7 +8,8 @@ function SymbolSearch (props) {
         if (e.target.value !== '---------') {
             console.log('if')
             props.getKeyData(e.target.value.split('|')[1].trim())
-            props.getNewsArticles(e.target.value.split('|')[1].trim())
+            props.getValues()
+            //props.getNewsArticles(e.target.value.split('|')[1].trim())
         }
         //console.log(e.target.value.split('|')[1].trim())
     }
