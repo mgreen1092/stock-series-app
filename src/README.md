@@ -26,3 +26,6 @@
 
 Error: API allowed 5 calls/minute. Text search feature called the API everytime letter was clicked.
 Resolution: Create own data set of S&P 500 to create a drop down menu of company names and stock tickers to prevent a call to the API.
+
+Error: The API data updates every 24 hours except for weekends. When retrieving the daily high/low prices, I needed to account for weekends since the key to access the data is the date.
+Resolution: Set up a conditional statement to prevent it from returning data on either Saturday or Sunday.
