@@ -7,8 +7,6 @@ import Articles from "./Articles/Articles";
 import './Container.css'
 
 function Container () {
-    const [name, setName] = useState([])
-    const [input, setInput] = useState('')
     const [keyData, setKeyData] = useState({})
     const [articles, setArticles] = useState([])
     function getKeyData (key) {
@@ -32,7 +30,7 @@ function Container () {
     function isWeekend (date = new Date()) {
         return date.getDay() === 6 || date.getDay()===0
     }
-    function getValues () {
+    function getValues (key) {
         let date = new Date()
         date.setDate(date.getDate()-5)
         let weekend = isWeekend(date)
@@ -44,7 +42,7 @@ function Container () {
         let day = date.toLocaleString("default", {day: "2-digit"})
         let formattedDate = year + '-' + month + '-' + day
         console.log(formattedDate)
-        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${keyData.Symbol}&apikey=L9CIXKF2CPVF19PV.`).then((response) => {
+        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${key}&apikey=L9CIXKF2CPVF19PV.`).then((response) => {
         console.log(keyData)
         console.log(response.data)
         setKeyData({ ...keyData,
@@ -55,18 +53,15 @@ function Container () {
         //response.data['Time Series (Daily)']
     })
     }
-    // function getNewsArticles () {
-    //     axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${keyData.Symbol}&apikey=L9CIXKF2CPVF19PV`).then((response) => {
-    //         console.log(response.data)
-    //         setArticles(response.data.feed)
-    //        //setKeyData({ ...keyData,
-    //        //title: response.data.feed
-    //         //response.data.feed
-    //     })
-    //     }
+    function getNewsArticles (key) {
+        axios.get(`https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=${key}&topics=technology&apikey=L9CIXKF2CPVF19PV.`).then((response) => {
+            console.log(response.data)
+            setArticles(response.data.feed)
+        })
+        }
     return (
         <div>
-            <SymbolSearch getValues={getValues} getKeyData={getKeyData} input={input}/>
+            <SymbolSearch getNewsArticles={getNewsArticles} getValues={getValues} getKeyData={getKeyData}/>
             <KeyData keyData={keyData}/>
             <Articles articles={articles}/>
         </div>
