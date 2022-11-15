@@ -69,28 +69,3 @@ function Container () {
 }
 
 export default Container
-
-//aapl
-
-// const handleChange = (e) => {
-//     e.preventDefault()
-//     console.log(e.target.value)
-//     //obtains text input value of SymbolSearch
-//     setInput(e.target.value)
-//     //Obtains symbol and company name based on the input from SymbolSearch
-//     let inputKey = e.target.value.toLowerCase()
-//     axios.get(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${inputKey}&apikey=L9CIXKF2CPVF19PV`).then((response) => {
-//     let bestMatches = response.data.bestMatches
-//     console.log(bestMatches, 'best matches')
-//     let displayNames = bestMatches?.filter((bestMatch) => {
-//         //when accessing key data - we can't have periods in the symbol
-//         return !bestMatch['1. symbol'].includes('.')
-//     })
-//     let newDropDown = displayNames?.map((displayName) => {
-//         return displayName['2. name'] + ' | ' + displayName['1. symbol']
-//     })
-//     setName(newDropDown)
-//     })
-//     console.log(name)
-// }
-// console.log(input)

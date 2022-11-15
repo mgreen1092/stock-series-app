@@ -5,8 +5,8 @@
 .Article-section {
     /* display: flex; */
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
 }
 .Container {
     margin-left: 50px;
@@ -15,7 +15,7 @@
     margin-bottom: 20px;
     flex-direction: row;
     flex-wrap: wrap;
-    flex-basis: 40%;
+    flex-basis: 50%;
 }
 .Article-content {
     margin-left: 10px;

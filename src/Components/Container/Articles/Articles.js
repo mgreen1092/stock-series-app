@@ -5,11 +5,11 @@ function Articles (props) {
     return (
         <div>
             <h2 className='News-feed'>News Feed:</h2>
-                {props.articles?.map((article) => {
+                <div className='Article-section'>
+                    {props.articles?.map((article) => {
                     return (
-                        <div className='Article-section'>
-                            <div className='Container'>
-                                <div className='Article-content'>
+                        <div className='Container'>
+                             <div className='Article-content'>
                                 <div className='Article-title'>
                                     <p><a href={article.url}>{article.title}</a></p>
                                 </div>
@@ -22,11 +22,11 @@ function Articles (props) {
                                 <div className='Article-summary'>
                                     <p><span id='Font'>Summary:</span> {article.summary}</p>
                                 </div>
-                                </div>
                             </div>
                         </div>
                     )
                 })}
+            </div>
         </div>
     )
 }
