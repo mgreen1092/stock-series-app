@@ -18,7 +18,21 @@
 
 ### Components:
 
+| Component    | Description                                                              |
+| ------------ | ------------------------------------------------------------------------ |
+| App          | Contains the header, make the initial data pull and include React Router |
+| Header       | Includes the nav and will render the container                           |
+| Container    | Includes KeyData, Articles, Graph, and Symbol holds API fetch            |
+| KeyData      | Displays all key data elements of the webpage                            |
+| Articles     | Displays news articles of related stock information                      |
+| Graph        | Displays time series data                                                |
+| SymbolSearch | Displays dropdown of S&P 500 stocks                                      |
+
 ### Time Frames:
+
+| Component | Description                                                              |
+| --------- | ------------------------------------------------------------------------ |
+| App       | Contains the header, make the initial data pull and include React Router |
 
 ### Code Snippet:
 
