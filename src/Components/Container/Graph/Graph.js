@@ -12,7 +12,7 @@ import {
 function Graph (props) {
     return (
         <LineChart
-          width={500}
+          width={800}
           height={300}
           data={props.graphData}
           margin={{
