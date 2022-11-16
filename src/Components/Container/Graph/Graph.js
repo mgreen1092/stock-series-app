@@ -29,11 +29,18 @@ function Graph (props) {
           <Legend />
           <Line
             type="monotone"
-            dataKey="pv"
+            dataKey="uv"
             stroke="#8884d8"
             activeDot={{ r: 8 }}
           />
-          <Line type="monotone" dataKey="high" stroke="#82ca9d" />
+          <Line
+            type="monotone"
+            dataKey="pv"
+            stroke="#82ca9d"
+            activeDot={{ r: 8 }}
+          />
+          <Line type="monotone" dataKey="high" stroke="#8884d8"/>
+          <Line type="monotone" dataKey="low" stroke="#82ca9d" />
         </LineChart>
       );
 }
