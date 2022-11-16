@@ -1,17 +1,16 @@
 body {
     font: arial;
 }
-.Container-div {
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* flex-direction: row; */
-    /* color: blue; */
+.Data-section {
+    display: flex;
 }
-.KeyData-Articles {
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
-    /* color: purple; */
+.KeyData-Graph {
+    display: flex;
+    flex-direction: row;
 }
-.Articles {
-    /* flex-direction: row; */
+.KeyData {
+    flex-direction: row;
+}
+.Graph {
+
 }

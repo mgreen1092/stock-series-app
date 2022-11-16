@@ -47,8 +47,16 @@ function Container () {
     return (
         <div>
             <SymbolSearch graph={graph} getNewsArticles={getNewsArticles} getKeyData={getKeyData}/>
-            <KeyData setGraphData={setGraphData} setKeyData={setKeyData} keyData={keyData}/>
-            <Graph graphData={graphData}/>
+            <div className='Data-section'>
+                <div className='KeyData-Graph'>
+                    <div className='KeyData'>
+                        <KeyData setGraphData={setGraphData} setKeyData={setKeyData} keyData={keyData}/>
+                    </div>
+                    <div className='Graph'>
+                        <Graph graphData={graphData}/>
+                    </div>
+                </div>
+            </div>
             <Articles articles={articles}/>
         </div>
     )
