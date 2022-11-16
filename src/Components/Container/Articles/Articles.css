@@ -3,17 +3,17 @@
     /* margin-right: 50px; */
 }
 .Article-section {
-    display: flex;
+    /* display: flex; */
 }
 .Container {
     margin-left: 50px;
     margin-right: 50px;
     border: 2px solid black;
     margin-bottom: 20px;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 .Article-content {
+    flex-direction: column;
     margin-left: 10px;
     margin-right: 10px;
 }

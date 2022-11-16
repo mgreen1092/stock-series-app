@@ -13,7 +13,7 @@ function Graph (props) {
     return (
         <LineChart
           width={800}
-          height={300}
+          height={400}
           data={props.graphData}
           margin={{
             top: 5,
@@ -30,17 +30,17 @@ function Graph (props) {
           <Line
             type="monotone"
             dataKey="uv"
-            stroke="#8884d8"
+            stroke="green"
             activeDot={{ r: 8 }}
           />
           <Line
             type="monotone"
             dataKey="pv"
-            stroke="#82ca9d"
+            stroke="red"
             activeDot={{ r: 8 }}
           />
-          <Line type="monotone" dataKey="high" stroke="#8884d8"/>
-          <Line type="monotone" dataKey="low" stroke="#82ca9d" />
+          <Line type="monotone" dataKey="high" stroke="green"/>
+          <Line type="monotone" dataKey="low" stroke="red" />
         </LineChart>
       );
 }
