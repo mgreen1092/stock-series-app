@@ -20,7 +20,6 @@ function KeyData ({keyData, setKeyData, setGraphData, graphData}) {
         let formattedDate = year + '-' + month + '-' + day
         const response = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${keyData.Symbol}&apikey=L9CIXKF2CPVF19PV.`)
         setKeyData({ ...keyData,
-            //graphRawData: crushObj(response.data['Time Series (Daily)']),
             high: response.data['Time Series (Daily)'][formattedDate]['2. high'],
             low: response.data['Time Series (Daily)'][formattedDate]['3. low'],
             volume: response.data['Time Series (Daily)'][formattedDate]['6. volume']
@@ -30,7 +29,6 @@ function KeyData ({keyData, setKeyData, setGraphData, graphData}) {
     console.log(keyData)
     }, [keyData])
     
-    //console.log(crushObj(keyData.graphRawData))
 
     function isWeekend (date = new Date()) {
         return date.getDay() === 6 || date.getDay()===0
@@ -41,9 +39,6 @@ function KeyData ({keyData, setKeyData, setGraphData, graphData}) {
             <div className='KeyData-title'>
                 <h2><span className='ID'>Key Data:</span> {keyData.Name}</h2>
             </div>
-            <div className='KeyData-description'>
-                <p><span className='ID'>Description:</span> {keyData.Description}</p>
-            </div>
             <div id='Key-data'>
                 <div className='Sector-industry'>
                     <p><span className='ID'>Exchange:</span> {keyData.Exchange}</p>
@@ -53,9 +48,12 @@ function KeyData ({keyData, setKeyData, setGraphData, graphData}) {
                 <div className='Price-Volume'>
                     <p><span className='ID'>High/Low:</span> {keyData.high}/{keyData.low}</p>
                     <p><span className='ID'>Volume:</span> {keyData.volume}</p>
-                    {/* <p>52 Week High: {keyData.52WeekHigh}</p>
-                    <p>52 Week Low: {keyData.52WeekLow}</p> */}
+                    <p><span className='ID'>52 Week High:</span> {keyData['52WeekHigh']}</p>
+                    <p><span className='ID'>52 Week Low:</span> {keyData['52WeekLow']}</p>
                     <p><span className='ID'>Earnings per share:</span> {keyData.EPS}</p>
+                </div>
+                <div className='KeyData-description'>
+                    <p><span className='ID'>Description:</span> {keyData.Description}</p>
                 </div>
             </div>
         </div>
