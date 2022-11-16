@@ -16,7 +16,6 @@ function Container () {
         console.log(key)
         //need to interpolate the symbol name selected - where IBM is now
         axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${key}&apikey=L9CIXKF2CPVF19PV`).then((response) => {
-            console.log(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${key}&apikey=L9CIXKF2CPVF19PV`)
             console.log(response.data)
             if (response.data.Note) {
                 alert('Too many calls')
@@ -24,10 +23,6 @@ function Container () {
                 alert('No data')
             }
             setKeyData(response.data)
-            // setKeyData({...keyData, response['data']})
-            console.log(keyData)
-            //getValues()
-            //getNewsArticles(keyData)
         })
     }
     console.log(keyData.Description, 'Description Key')

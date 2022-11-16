@@ -4,7 +4,6 @@ import './KeyData.css'
 
 
 function KeyData ({keyData, setKeyData, setGraphData, graphData}) {
-    //const crushObj = (obj) => Object.keys(obj).reduce((acc, cur) => typeof obj[cur] === 'object' ? { ...acc, ...crushObj(obj[cur]) } : { ...acc, [cur]: obj[cur] } , {})
     console.log('-------------------')
     useEffect(() => {
         async function getValues () {
@@ -26,14 +25,12 @@ function KeyData ({keyData, setKeyData, setGraphData, graphData}) {
         })
     }
     getValues()
-    console.log(keyData)
     }, [keyData])
     
 
     function isWeekend (date = new Date()) {
         return date.getDay() === 6 || date.getDay()===0
     }
-    console.log(keyData)
     return (
         <div className='KeyData-section'>
             <div className='KeyData-title'>
