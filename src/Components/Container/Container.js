@@ -36,10 +36,11 @@ function Container () {
     function graph (symbol) {
         axios.get(`https://api.twelvedata.com/time_series?symbol=${symbol}&interval=1day&apikey=8fbbb93916fd4d0bb531696e24ca8115`).then((response) => {
             console.log(response.data.values)
-            setGraphData(response.data.values)
+            setGraphData(response.data.values.reverse())
         })
     }
     console.log(graphData)
+    console.log(articles, 'articles')
     return (
         <div>
             <SymbolSearch graph={graph} getNewsArticles={getNewsArticles} getKeyData={getKeyData}/>
@@ -54,9 +55,17 @@ function Container () {
                 </div>
             </div>
             <Description keyData={keyData}/>
-            <Articles articles={articles}/>
+            {articles.length !== 0 && 
+                    <Articles articles={articles}/>
+            }
         </div>
     )
 }
 
 export default Container
+
+//{/* {articles.items !== 0 && 
+{/* <div>
+<Articles articles={articles}/>
+</div>
+} */}
