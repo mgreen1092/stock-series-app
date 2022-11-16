@@ -28,6 +28,7 @@
 | Articles     | Displays news articles of related stock information                      |
 | Graph        | Displays time series data                                                |
 | SymbolSearch | Displays dropdown of S&P 500 stocks                                      |
+| Description  | Adds description of the company selected                                 |
 
 ### Time Frames:
 
@@ -48,3 +49,12 @@ Resolution: Create own data set of S&P 500 to create a drop down menu of company
 
 Error: The API data updates every 24 hours except for weekends. When retrieving the daily high/low prices, I needed to account for weekends since the key to access the data is the date.
 Resolution: Set up a conditional statement to prevent it from returning data on either Saturday or Sunday.
+
+Error: API allowed 5 calls/minute which prevented accessing data to render the graph.
+Resolution: I used a different API that had the same data to render on the graph. The data was also formatted in a way that was easier to access for the graph.
+
+Error: Graph not adjusting for certain company high/low values
+Resolution:
+
+Error: Date of news article is in the incorrect format.
+Resolution:
