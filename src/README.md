@@ -4,7 +4,7 @@
 
 - [Wireframe](https://res.cloudinary.com/dhwx7jnjx/image/upload/v1668543047/FullSizeRender_vyj6lu.jpg)
 
-- [Component Hierarchy](https://res.cloudinary.com/dhwx7jnjx/image/upload/v1668543038/FullSizeRender_dbp5du.jpg)
+- [Component Hierarchy](https://res.cloudinary.com/dhwx7jnjx/image/upload/v1668630442/IMG_0029_xfvfz3.jpg)
 
 ### MVP Goals:
 
