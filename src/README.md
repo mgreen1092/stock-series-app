@@ -6,6 +6,14 @@
 
 - [Component Hierarchy](https://res.cloudinary.com/dhwx7jnjx/image/upload/v1668630442/IMG_0029_xfvfz3.jpg)
 
+### API
+
+- [Alpha Advantage News](https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=WMT&topics=technology&apikey=L9CIXKF2CPVF19PV.)
+
+- [Alpha Advantage Key Data](https://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apikey=demo)
+
+- [Twelve Data Time Series](https://api.twelvedata.com/time_series?symbol=${symbol}&interval=1day&apikey=8fbbb93916fd4d0bb531696e24ca8115)
+
 ### MVP Goals:
 
 - Webpage with option to select stock
@@ -59,5 +67,5 @@ Resolution: I needed to add a domain and used Math.random() to get a whole numbe
 Error: Date of news article is in the incorrect format.
 Resolution:
 
-Error: Some stocks/companies don't have news articles available in the data. 
+Error: Some stocks/companies don't have news articles available in the data.
 Resolution: Make a conditional to display only if there is data for the specific stock/company.
