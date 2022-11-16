@@ -36,7 +36,7 @@
 | ---------------- | -------- | -------------- | ------------- | ----------- |
 | Working with API | H        | 3 hours        | 4 hours       | 4 hours     |
 | Search Bar       | H        | 1.5 hours      | 1 hour        | 1 hour      |
-| Graph            | M        | 2 hours        |               |             |
+| Graph            | M        | 2 hours        | 1 hour        | 1 hour      |
 | Articles         | M        | 2 hours        | 1 hour        | 1 hour      |
 | Key data         | H        | 3 hours        | 3 hours       | 3 hours     |
 
@@ -53,8 +53,11 @@ Resolution: Set up a conditional statement to prevent it from returning data on 
 Error: API allowed 5 calls/minute which prevented accessing data to render the graph.
 Resolution: I used a different API that had the same data to render on the graph. The data was also formatted in a way that was easier to access for the graph.
 
-Error: Graph not adjusting for certain company high/low values
-Resolution:
+Error: Graph not adjusting for certain company high/low values on the y-axis.
+Resolution: I needed to add a domain and used Math.random() to get a whole number.
 
 Error: Date of news article is in the incorrect format.
 Resolution:
+
+Error: Some stocks/companies don't have news articles available in the data. 
+Resolution: Make a conditional to display only if there is data for the specific stock/company.
