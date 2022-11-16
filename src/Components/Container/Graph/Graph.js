@@ -11,6 +11,7 @@ import {
   } from "recharts";
 
 function Graph (props) {
+    console.log(props.graphData)
     return (
         //<ResponsiveContainer width="50%" height="50%">
             <LineChart
@@ -26,7 +27,7 @@ function Graph (props) {
             >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="datetime" />
-                <YAxis />
+                <YAxis type="number" domain={[0, (dataMax) => Math.round((dataMax) + 50)]} allowDataOverflow={false}/>
                 <Tooltip />
                 <Legend />
                 <Line
