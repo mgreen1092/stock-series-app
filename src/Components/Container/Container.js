@@ -6,6 +6,7 @@ import KeyData from "./KeyData/KeyData";
 import Articles from "./Articles/Articles";
 import Graph from './Graph/Graph'
 import './Container.css'
+import Description from "./Description/Description";
 
 function Container () {
     const [keyData, setKeyData] = useState({})
@@ -57,6 +58,7 @@ function Container () {
                     </div>
                 </div>
             </div>
+            <Description keyData={keyData}/>
             <Articles articles={articles}/>
         </div>
     )

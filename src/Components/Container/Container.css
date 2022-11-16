@@ -12,5 +12,6 @@ body {
     flex-direction: row;
 }
 .Graph {
-
+    margin-top: 70px;
+    margin-right: 50px;
 }

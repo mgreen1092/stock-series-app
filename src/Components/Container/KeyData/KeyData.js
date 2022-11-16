@@ -52,9 +52,6 @@ function KeyData ({keyData, setKeyData, setGraphData, graphData}) {
                     <p><span className='ID'>52 Week Low:</span> {keyData['52WeekLow']}</p>
                     <p><span className='ID'>Earnings per share:</span> {keyData.EPS}</p>
                 </div>
-                <div className='KeyData-description'>
-                    <p><span className='ID'>Description:</span> {keyData.Description}</p>
-                </div>
             </div>
         </div>
     )
