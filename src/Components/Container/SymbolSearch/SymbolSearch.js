@@ -8,6 +8,7 @@ function SymbolSearch (props) {
         props.getKeyData(e.target.value)
         //props.getValues(e.target.value)
         props.getNewsArticles(e.target.value)
+        props.graph(e.target.value)
         }
     return (
         <div className='Symbol-search'>
