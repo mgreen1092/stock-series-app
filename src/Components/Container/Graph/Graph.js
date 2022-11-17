@@ -11,9 +11,7 @@ import {
   } from "recharts";
 
 function Graph (props) {
-    console.log(props.graphData)
     return (
-        //<ResponsiveContainer width="50%" height="50%">
             <LineChart
                 width={800}
                 height={400}
@@ -42,10 +40,7 @@ function Graph (props) {
                     stroke="red"
                     activeDot={{ r: 4 }}
                 />
-                {/* <Line type="monotone" dataKey='low' stroke="red"/>
-                <Line type="monotone" dataKey='low' stroke="red" /> */}
             </LineChart>
-        //</ResponsiveContainer>
       );
 }
 
