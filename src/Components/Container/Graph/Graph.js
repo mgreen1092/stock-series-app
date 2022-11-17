@@ -7,7 +7,6 @@ import {
     CartesianGrid,
     Tooltip,
     Legend,
-    //ResponsiveContainer
   } from "recharts";
 
 function Graph (props) {
