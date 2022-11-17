@@ -10,6 +10,7 @@ import Description from "./Description/Description";
 
 function Container () {
     const [keyData, setKeyData] = useState({})
+    const [additionalKeyData, setAdditionalKeyData]= useState({})
     const [articles, setArticles] = useState([])
     const [graphData, setGraphData] = useState([])
     function getKeyData (key) {    
@@ -22,6 +23,34 @@ function Container () {
             setKeyData(response.data)
         })
     }
+    function isWeekend (date = new Date()) {
+        return date.getDay() === 6 || date.getDay()===0
+    }
+    async function getValues () {
+        let date = new Date()
+        date.setDate(date.getDate()-5)
+        let weekend = isWeekend(date)
+        if (weekend === true) {
+            date.setDate(date.getDate()-3)
+        }
+        let year = date.toLocaleString("default", {year: "numeric"})
+        let month = date.toLocaleString("default", {month: "2-digit"})
+        let day = date.toLocaleString("default", {day: "2-digit"})
+        let formattedDate = year + '-' + month + '-' + day
+        //console.log(typeof formattedDate)
+        const response = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${keyData.Symbol}&apikey=L9CIXKF2CPVF19PV.`)
+        console.log(response.data)
+        setAdditionalKeyData({ ...keyData,
+            high: response.data['Time Series (Daily)'][formattedDate]['2. high'],
+            low: response.data['Time Series (Daily)'][formattedDate]['3. low'],
+            volume: response.data['Time Series (Daily)'][formattedDate]['6. volume']
+        })
+    }
+    console.log(additionalKeyData)
+    useEffect(() => {
+        getValues()
+    }, [keyData])
+
     function getNewsArticles (key) {
         axios.get(`https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=${key}&topics=technology&apikey=L9CIXKF2CPVF19PV.`).then((response) => {
             setArticles(response.data.feed)
@@ -38,7 +67,7 @@ function Container () {
             <div className='Data-section'>
                 <div className='KeyData-Graph'>
                     <div className='KeyData'>
-                        <KeyData setGraphData={setGraphData} setKeyData={setKeyData} keyData={keyData}/>
+                        <KeyData setGraphData={setGraphData} keyData={additionalKeyData}/>
                     </div>
                     <div className='Graph'>
                         <Graph graphData={graphData}/>

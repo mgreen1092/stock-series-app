@@ -64,26 +64,32 @@ Overall, the stock series app is a great resource for users with limited and exp
 
 ### Issues and Resolutions:
 
-Error: API allowed 5 calls/minute. Text search feature called the API everytime letter was clicked.
-Resolution: Create own data set of S&P 500 to create a drop down menu of company names and stock tickers to prevent a call to the API.
+- Error: API allowed 5 calls/minute. Text search feature called the API everytime letter was clicked.
 
-Error: The API data updates every 24 hours except for weekends. When retrieving the daily high/low prices, I needed to account for weekends since the key to access the data is the date.
-Resolution: Set up a conditional statement to prevent it from returning data on either Saturday or Sunday.
+- Resolution: Create own data set of S&P 500 to create a drop down menu of company names and stock tickers to prevent a call to the API.
 
-Error: API allowed 5 calls/minute which prevented accessing data to render the graph.
-Resolution: I used a different API that had the same data to render on the graph. The data was also formatted in a way that was easier to access for the graph.
+- Error: The API data updates every 24 hours except for weekends. When retrieving the daily high/low prices, I needed to account for weekends since the key to access the data is the date.
 
-Error: Graph not adjusting for certain company high/low values on the y-axis.
-Resolution: I needed to add a domain and used Math.random() to get a whole number.
+- Resolution: Set up a conditional statement to prevent it from returning data on either Saturday or Sunday.
 
-Error: Date of news article is in the incorrect format.
-Resolution: I tried to use .toLocaleDateString to the date section of the articles, but I kept on getting an error that .toLocaleDateString is not an object. As a work around, I trimmed the date and inserted hyphens.
+- Error: API allowed 5 calls/minute which prevented accessing data to render the graph.
 
-Error: Some stocks/companies don't have news articles available in the data.
-Resolution: Make a conditional to display only if there is data for the specific stock/company.
+- Resolution: I used a different API that had the same data to render on the graph. The data was also formatted in a way that was easier to access for the graph.
 
-Error: Error in console: "Uncaught (in promise) TypeError: Cannot read properties of undefined (reading '2022-11-09') at getValues" on KeyData.
-Resolution: 
+- Error: Graph not adjusting for certain company high/low values on the y-axis.
+
+- Resolution: I needed to add a domain and used Math.random() to get a whole number.
+
+- Error: Date of news article is in the incorrect format.
+
+- Resolution: I tried to use .toLocaleDateString to the date section of the articles, but I kept on getting an error that .toLocaleDateString is not an object. As a work around, I trimmed the date and inserted hyphens.
+
+- Error: Some stocks/companies don't have news articles available in the data.
+- Resolution: Make a conditional to display only if there is data for the specific stock/company.
+
+- Error: Error in console: "Uncaught (in promise) TypeError: Cannot read properties of undefined (reading '2022-11-09') at getValues" on KeyData.
+
+- Resolution: 
 
 ### Future Plans:
 - Include a type search bar

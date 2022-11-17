@@ -4,7 +4,7 @@ import data from '../data'
 
 function SymbolSearch (props) {
     const handleChange = (e) => {
-        console.log(e.target.value)
+        //console.log(e.target.value)
         props.getKeyData(e.target.value)
         props.getNewsArticles(e.target.value)
         props.graph(e.target.value)
