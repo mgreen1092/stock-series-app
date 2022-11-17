@@ -8,6 +8,7 @@
     border-radius: 10px;
     margin-bottom: 20px;
     flex-wrap: wrap;
+    box-shadow: 5px 5px lightgray;
 }
 .Article-content {
     flex-direction: column;

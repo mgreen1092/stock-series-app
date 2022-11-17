@@ -37,9 +37,7 @@ function Container () {
         let month = date.toLocaleString("default", {month: "2-digit"})
         let day = date.toLocaleString("default", {day: "2-digit"})
         let formattedDate = year + '-' + month + '-' + day
-        //console.log(typeof formattedDate)
         const response = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${keyData.Symbol}&apikey=L9CIXKF2CPVF19PV.`)
-        console.log(response.data)
         setAdditionalKeyData({ ...keyData,
             high: response.data['Time Series (Daily)'][formattedDate]['2. high'],
             low: response.data['Time Series (Daily)'][formattedDate]['3. low'],

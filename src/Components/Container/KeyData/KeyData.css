@@ -6,15 +6,13 @@
 .KeyData-title {
     margin: 0 auto;
     margin-left: 0px;
-    /* font-family: 'Candal', sans-serif; */
     font-family: 'Archivo Black', sans-serif;
 
 }
 #Key-data {
-    /* margin-left: 10px;
-    margin-right: 10px; */
     border: 2px solid rgb(0, 144, 186);
     border-radius: 10px;
+    box-shadow: 5px 5px lightgray;
 }
 
 .KeyData-description {
@@ -23,10 +21,10 @@
     margin-top: 20px;
 }
 .Description-text {
-    /* margin-left: 10px; */
     border: 2px solid rgb(0, 144, 186);
     border-radius: 10px;
     padding: 15px;
+    box-shadow: 5px 5px lightgray;
 }
 .Sector-industry {
     margin-right: 200px;
