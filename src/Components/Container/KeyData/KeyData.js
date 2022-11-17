@@ -5,7 +5,7 @@ function KeyData ({keyData}) {
     return (
         <div className='KeyData-section'>
             <div className='KeyData-title'>
-                <h2><span className='ID'>Key Data:</span> {keyData.Name}</h2>
+                <h2><span className='ID'></span> {keyData.Name}</h2>
             </div>
             <div id='Key-data'>
                 <div className='Sector-industry'>
