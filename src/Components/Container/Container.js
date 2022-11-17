@@ -39,9 +39,9 @@ function Container () {
         let formattedDate = year + '-' + month + '-' + day
         const response = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${keyData.Symbol}&apikey=L9CIXKF2CPVF19PV.`)
         setAdditionalKeyData({ ...keyData,
-            high: response.data['Time Series (Daily)'][formattedDate]['2. high'],
-            low: response.data['Time Series (Daily)'][formattedDate]['3. low'],
-            volume: response.data['Time Series (Daily)'][formattedDate]['6. volume']
+            high: response.data["Time Series (Daily)"][formattedDate]["2. high"],
+            low: response.data["Time Series (Daily)"][formattedDate]["3. low"],
+            volume: response.data["Time Series (Daily)"][formattedDate]["6. volume"]
         })
     }
     useEffect(() => {
@@ -61,12 +61,12 @@ function Container () {
     return (
         <div>
             <SymbolSearch graph={graph} getNewsArticles={getNewsArticles} getKeyData={getKeyData}/>
-            <div className='Data-section'>
-                <div className='KeyData-Graph'>
-                    <div className='KeyData'>
+            <div className="Data-section">
+                <div className="KeyData-Graph">
+                    <div className="KeyData">
                         <KeyData setGraphData={setGraphData} keyData={additionalKeyData}/>
                     </div>
-                    <div className='Graph'>
+                    <div className="Graph">
                         <Graph graphData={graphData}/>
                     </div>
                 </div>
