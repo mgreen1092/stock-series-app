@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import './KeyData.css'
 
 
-function KeyData ({keyData, setKeyData, setGraphData, graphData}) {
+function KeyData ({keyData, setKeyData}) {
     useEffect(() => {
         async function getValues () {
         let date = new Date()
@@ -16,8 +16,10 @@ function KeyData ({keyData, setKeyData, setGraphData, graphData}) {
         let month = date.toLocaleString("default", {month: "2-digit"})
         let day = date.toLocaleString("default", {day: "2-digit"})
         let formattedDate = year + '-' + month + '-' + day
+        console.log(typeof formattedDate)
         const response = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${keyData.Symbol}&apikey=L9CIXKF2CPVF19PV.`)
-        setKeyData({ ...keyData,
+        console.log(response.data)
+        await setKeyData({ ...keyData,
             high: response.data['Time Series (Daily)'][formattedDate]['2. high'],
             low: response.data['Time Series (Daily)'][formattedDate]['3. low'],
             volume: response.data['Time Series (Daily)'][formattedDate]['6. volume']

@@ -22,8 +22,6 @@ function Container () {
             setKeyData(response.data)
         })
     }
-    console.log(keyData.Description, 'Description Key')
-    console.log(keyData)
     function getNewsArticles (key) {
         axios.get(`https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=${key}&topics=technology&apikey=L9CIXKF2CPVF19PV.`).then((response) => {
             setArticles(response.data.feed)
@@ -31,11 +29,9 @@ function Container () {
         }
     function graph (symbol) {
         axios.get(`https://api.twelvedata.com/time_series?symbol=${symbol}&interval=1day&apikey=8fbbb93916fd4d0bb531696e24ca8115`).then((response) => {
-            console.log(response.data.values)
             setGraphData(response.data.values.reverse())
         })
     }
-    console.log(articles, 'articles')
     return (
         <div>
             <SymbolSearch graph={graph} getNewsArticles={getNewsArticles} getKeyData={getKeyData}/>

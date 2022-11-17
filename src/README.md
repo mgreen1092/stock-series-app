@@ -88,4 +88,6 @@ Resolution:
 ### Future Plans:
 - Include a type search bar
 - Include temporary data for the home screen so it isn't blank when you first arrive
+- Have a rounded value on the y-axis ending in 0 or 5
 - Improve styling
+    - add rotating banner of stock tickers
