@@ -44,14 +44,14 @@ function Container () {
             volume: response.data['Time Series (Daily)'][formattedDate]['6. volume']
         })
     }
-    console.log(additionalKeyData)
     useEffect(() => {
         getValues()
     }, [keyData])
 
     function getNewsArticles (key) {
-        axios.get(`https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=${key}&topics=technology&apikey=L9CIXKF2CPVF19PV.`).then((response) => {
-            setArticles(response.data.feed)
+        axios.get(`https://api.polygon.io/v2/reference/news?ticker=${key}&apiKey=yQnhLxouu8Eo81nORx2a7bfCviPQyq6u`).then((response) => {
+        //axios.get(`https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=${key}&topics=technology&apikey=L9CIXKF2CPVF19PV.`).then((response) => {
+            setArticles(response.data.results)
         })
         }
     function graph (symbol) {

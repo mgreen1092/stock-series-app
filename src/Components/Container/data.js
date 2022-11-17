@@ -65,19 +65,6 @@ const tickerName = [
       "Action": "Analyze"
     },
     {
-      "Symbol": "BRK.B",
-      "Description": "Berkshire Hathaway Inc. Class B",
-      "Category2": "Common stocks",
-      "Category3": "Large cap",
-      "GICS Sector": "Financials",
-      "Market cap": "$683,189,263,945",
-      "Dividend yield": "0.00%",
-      "Price to TTM earnings": 4.81,
-      "Price to TTM sales": 1.92,
-      "Price to book value": 0.78,
-      "Action": "Analyze"
-    },
-    {
       "Symbol": "TSLA",
       "Description": "Tesla Inc",
       "Category2": "Common stocks",

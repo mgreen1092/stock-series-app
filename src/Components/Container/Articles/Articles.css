@@ -9,7 +9,7 @@
     border-radius: 10px;
     margin-bottom: 20px;
     flex-wrap: wrap;
-    box-shadow: 5px 5px lightgray;
+    box-shadow: 7px 7px rgb(0, 144, 186);
     transition: all .4s ease-in-out; 
 }
 .Container:hover { 

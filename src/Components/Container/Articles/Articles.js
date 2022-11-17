@@ -11,13 +11,13 @@ function Articles (props) {
                         <div className='Container'>
                              <div className='Article-content'>
                                 <div className='Article-title'>
-                                    <p><a href={article.url}>{article.title}</a></p>
+                                    <p><a href={article.article_url}>{article.title}</a></p>
                                 </div>
                                 <div className='Article-date'>
-                                    <p><span id='Font'>Date:</span> {article.time_published.split('T')[0].slice(0, 4)}-{article.time_published.split('T')[0].slice(4, 6)}-{article.time_published.split('T')[0].slice(6, 8)}</p>
+                                    <p><span id='Font'>Date:</span> {article.published_utc.substring(0, 10)}</p>
                                 </div>
                                 <div className='Article-summary'>
-                                    <p><a href={article.url}><span id='Font'>Summary:</span> {article.summary}</a></p>
+                                    <p><a href={article.article_url}><span id='Font'>Summary:</span> {article.description}</a></p>
                                 </div>
                             </div>
                         </div>
