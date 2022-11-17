@@ -16,7 +16,10 @@ function SymbolSearch (props) {
                 <select onChange={handleChange} className='Symbol-drop'>
                     {data.map((tickerName) => {
                     return (
+                    <div>
+                        <option></option>
                         <option value={tickerName.Symbol} className='Symbol-option'>{tickerName.Description} | {tickerName.Symbol}</option>
+                    </div>
                     )
                     })}
                 </select>
