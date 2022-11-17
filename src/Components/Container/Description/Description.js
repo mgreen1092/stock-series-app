@@ -4,7 +4,8 @@ import '../KeyData/KeyData.css'
 function Description ({keyData}) {
     return (
         <div className='KeyData-description'>
-            <p><span className='ID'>Description:</span> {keyData.Description}</p>
+            <p className='Description-text'><span className='ID'>Company Description:</span></p>
+            <p className='Description-text'>{keyData.Description}</p>
         </div>
     )
 }

@@ -1,35 +1,36 @@
 .KeyData-section {
-    /* border: 2px solid green; */
     display: flex;
     flex-direction: column;
+    border: 2px solid rgb(0, 144, 186);
+    border-radius: 10px;
+    margin-left: 50px;
 }
 .KeyData-title {
-    /* border: 2px solid blue; */
     margin: 0 auto;
-    margin-left: 50px;
+    margin-left: 10px;
+    /* font-family: 'Candal', sans-serif; */
 
 }
 #Key-data {
-    /* border: 2px solid purple; */
-    /* margin: 0 auto; */
-    /* display: flex; */
-    /* flex-direction: row; */
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
 
 }
 .KeyData-description {
-    /* border: 2px solid red; */
+    border: 2px solid rgb(0, 144, 186);
+    border-radius: 10px;
     margin-left: 50px;
     margin-right: 50px;
+    margin-top: 20px;
+}
+.Description-text {
+    margin-left: 10px;
 }
 .Sector-industry {
     margin-right: 100px;
 }
 .Price-Volume {
-    /* margin-right: 100px; */
     margin-left: 0px;
-    /* color: blue; */
 }
 .ID {
     font-weight: bold;

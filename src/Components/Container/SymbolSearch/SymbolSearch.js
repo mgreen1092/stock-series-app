@@ -13,7 +13,7 @@ function SymbolSearch (props) {
         <div className='Symbol-search'>
             <form className='Symbol-form2'>
                 <select onChange={handleChange} className='Symbol-drop'>
-                    <option></option>
+                    <option>Select a company:</option>
                     {data.map((tickerName) => {
                     return (
                         <option value={tickerName.Symbol} className='Symbol-option'>{tickerName.Description} | {tickerName.Symbol}</option>

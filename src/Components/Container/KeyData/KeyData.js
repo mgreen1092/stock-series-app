@@ -14,11 +14,12 @@ function KeyData ({keyData}) {
                     <p><span className='ID'>Industry:</span> {keyData.Industry}</p>
                 </div>
                 <div className='Price-Volume'>
-                    <p><span className='ID'>High/Low:</span> {keyData.high}/{keyData.low}</p>
+                    <p><span className='ID'>High/Low:</span> ${keyData.high}</p>
+                    <p><span className='ID'>Low:</span> ${keyData.low}</p>
                     <p><span className='ID'>Volume:</span> {keyData.volume}</p>
-                    <p><span className='ID'>52 Week High:</span> {keyData['52WeekHigh']}</p>
-                    <p><span className='ID'>52 Week Low:</span> {keyData['52WeekLow']}</p>
-                    <p><span className='ID'>Earnings per share:</span> {keyData.EPS}</p>
+                    <p><span className='ID'>52 Week High:</span> ${keyData['52WeekHigh']}</p>
+                    <p><span className='ID'>52 Week Low:</span> ${keyData['52WeekLow']}</p>
+                    <p><span className='ID'>Earnings per share:</span> ${keyData.EPS}</p>
                 </div>
             </div>
         </div>
