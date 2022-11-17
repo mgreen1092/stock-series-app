@@ -67,7 +67,7 @@ Overall, the stock series app is a great resource for users with limited and exp
 
 ### Code Snippet:
 
-<YAxis type="number" domain={[0, (dataMax) => Math.round((dataMax) + 50)]} allowDataOverflow={false}/>
+`<YAxis type="number" domain={[0, (dataMax) => Math.round((dataMax) + 50)]} allowDataOverflow={false}/>`
 
 ### Issues and Resolutions:
 
