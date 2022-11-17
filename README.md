@@ -18,6 +18,12 @@ Overall, the stock series app is a great resource for users with limited and exp
 
 - [Alpha Advantage Key Data](https://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apikey=demo)
 
+  - Exchange, Sector, Industry, 52 Week High, 52 Week Low, and Earnings per share
+
+- [Alpha Advantage Key Data](https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=META&apikey=L9CIXKF2CPVF19PV)
+
+  - High, Low, Volume
+
 - [Twelve Data Time Series](https://api.twelvedata.com/time_series?symbol=${symbol}&interval=1day&apikey=8fbbb93916fd4d0bb531696e24ca8115)
 
 ### MVP Goals:
