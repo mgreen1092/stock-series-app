@@ -2,34 +2,6 @@ import './KeyData.css'
 
 
 function KeyData ({keyData}) {
-    // useEffect(() => {
-    //     async function getValues () {
-    //     let date = new Date()
-    //     date.setDate(date.getDate()-5)
-    //     let weekend = isWeekend(date)
-    //     if (weekend === true) {
-    //         date.setDate(date.getDate()-3)
-    //     }
-    //     let year = date.toLocaleString("default", {year: "numeric"})
-    //     let month = date.toLocaleString("default", {month: "2-digit"})
-    //     let day = date.toLocaleString("default", {day: "2-digit"})
-    //     let formattedDate = year + '-' + month + '-' + day
-    //     //console.log(typeof formattedDate)
-    //     const response = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${keyData.Symbol}&apikey=L9CIXKF2CPVF19PV.`)
-    //     console.log(response.data)
-    //     setKeyData({ ...keyData,
-    //         high: response.data['Time Series (Daily)'][formattedDate]['2. high'],
-    //         low: response.data['Time Series (Daily)'][formattedDate]['3. low'],
-    //         volume: response.data['Time Series (Daily)'][formattedDate]['6. volume']
-    //     })
-    // }
-    // getValues()
-    // }, [keyData])
-    
-
-    // function isWeekend (date = new Date()) {
-    //     return date.getDay() === 6 || date.getDay()===0
-    // }
     return (
         <div className='KeyData-section'>
             <div className='KeyData-title'>
