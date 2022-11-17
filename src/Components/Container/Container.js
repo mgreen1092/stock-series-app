@@ -55,7 +55,7 @@ function Container () {
                 </div>
             </div>
             <Description keyData={keyData}/>
-            {articles.length !== 0 && 
+            {articles?.length !== 0 && 
                     <Articles articles={articles}/>
             }
         </div>
