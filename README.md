@@ -14,7 +14,7 @@ Overall, the stock series app is a great resource for users with limited and exp
 
 ### API
 
-- [Alpha Advantage News](https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=WMT&topics=technology&apikey=L9CIXKF2CPVF19PV.)
+- [Polygon News Articles](https://api.polygon.io/v2/reference/news?ticker=AAPL&apiKey=yQnhLxouu8Eo81nORx2a7bfCviPQyq6u)
 
 - [Alpha Advantage Key Data](https://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apikey=demo)
 
@@ -103,6 +103,5 @@ Overall, the stock series app is a great resource for users with limited and exp
 - Include a type search bar
 - Include temporary data for the home screen so it isn't blank when you first arrive
 - Have a rounded value on the y-axis ending in 0 or 5
-- Find a better news article source because a lot of the stocks don't have news data on Alpha Advantage
 - Improve styling
   - add rotating banner of stock tickers
