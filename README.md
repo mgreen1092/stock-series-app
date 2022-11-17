@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Stock Series App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Description
 
-## Available Scripts
+Stock Series is a user friendly app that displays data on the S&P 500. Users can learn about the companies stock performance including the high/low value, volume, 52 week high/low values, earning per share, and a time series graph of high/low values over the last month. The stock series app also provides a description of the stock selected, allowing users to learn more about the companies background and purpose. If users are curious about learning more, there is a news feed section with recent news articles relating to the selected stock.
 
-In the project directory, you can run:
+Overall, the stock series app is a great resource for users with limited and expansive stock knowledge to learn more about the S&P500 stocks.
 
-### `npm start`
+### Wireframe and React Componenet Hierarchy
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Wireframe](https://res.cloudinary.com/dhwx7jnjx/image/upload/v1668543047/FullSizeRender_vyj6lu.jpg)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Component Hierarchy](https://res.cloudinary.com/dhwx7jnjx/image/upload/v1668630442/IMG_0029_xfvfz3.jpg)
 
-### `npm test`
+### API
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Alpha Advantage News](https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=WMT&topics=technology&apikey=L9CIXKF2CPVF19PV.)
 
-### `npm run build`
+- [Alpha Advantage Key Data](https://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apikey=demo)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Twelve Data Time Series](https://api.twelvedata.com/time_series?symbol=${symbol}&interval=1day&apikey=8fbbb93916fd4d0bb531696e24ca8115)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### MVP Goals:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Webpage with option to select stock
+- Shows price/volume and information about the stock
+- Have a chart/graph demonstrating historical data
 
-### `npm run eject`
+### Post MVP Goals:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Use D3 to make a graph of stock prices over time
+- Related news articles about selected stock
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Components:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Component    | Description                                                              |
+| ------------ | ------------------------------------------------------------------------ |
+| App          | Contains the header, make the initial data pull and include React Router |
+| Header       | Includes the nav and will render the container                           |
+| Container    | Includes KeyData, Articles, Graph, and Symbol holds API fetch            |
+| KeyData      | Displays all key data elements of the webpage                            |
+| Articles     | Displays news articles of related stock information                      |
+| Graph        | Displays time series data                                                |
+| SymbolSearch | Displays dropdown of S&P 500 stocks                                      |
+| Description  | Adds description of the company selected                                 |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Time Frames:
 
-## Learn More
+| Component        | Priority | Estimated Time | Time Invested | Actual Time |
+| ---------------- | -------- | -------------- | ------------- | ----------- |
+| Working with API | H        | 3 hours        | 4 hours       | 4 hours     |
+| Search Bar       | H        | 1.5 hours      | 1 hour        | 1 hour      |
+| Graph            | M        | 2 hours        | 1 hour        | 1 hour      |
+| Articles         | M        | 2 hours        | 1 hour        | 1 hour      |
+| Key data         | H        | 3 hours        | 3 hours       | 3 hours     |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Additional Libraries
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Axios
+- RevCharts
 
-### Code Splitting
+### Code Snippet:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<YAxis type="number" domain={[0, (dataMax) => Math.round((dataMax) + 50)]} allowDataOverflow={false}/>
 
-### Analyzing the Bundle Size
+### Issues and Resolutions:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Error: API allowed 5 calls/minute. Text search feature called the API everytime letter was clicked.
 
-### Making a Progressive Web App
+- Resolution: Create own data set of S&P 500 to create a drop down menu of company names and stock tickers to prevent a call to the API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Error: The API data updates every 24 hours except for weekends. When retrieving the daily high/low prices, I needed to account for weekends since the key to access the data is the date.
 
-### Advanced Configuration
+- Resolution: Set up a conditional statement to prevent it from returning data on either Saturday or Sunday.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Error: API allowed 5 calls/minute which prevented accessing data to render the graph.
 
-### Deployment
+- Resolution: I used a different API that had the same data to render on the graph. The data was also formatted in a way that was easier to access for the graph.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Error: Graph not adjusting for certain company high/low values on the y-axis.
 
-### `npm run build` fails to minify
+- Resolution: I needed to add a domain and used Math.random() to get a whole number.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Error: Date of news article is in the incorrect format.
+
+- Resolution: I tried to use .toLocaleDateString to the date section of the articles, but I kept on getting an error that .toLocaleDateString is not an object. As a work around, I trimmed the date and inserted hyphens.
+
+- Error: Some stocks/companies don't have news articles available in the data.
+- Resolution: Make a conditional to display only if there is data for the specific stock/company.
+
+- Error: Error in console: "Uncaught (in promise) TypeError: Cannot read properties of undefined (reading '2022-11-09') at getValues" on KeyData.
+
+- Resolution:
+
+### Future Plans:
+
+- Include a type search bar
+- Include temporary data for the home screen so it isn't blank when you first arrive
+- Have a rounded value on the y-axis ending in 0 or 5
+- Improve styling
+  - add rotating banner of stock tickers
