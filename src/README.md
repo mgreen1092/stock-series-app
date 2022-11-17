@@ -1,5 +1,11 @@
 # Stock Series App
 
+### Description
+
+Stock Series is a user friendly app that displays data on the S&P 500. Users can learn about the companies stock performance including the high/low value, volume, 52 week high/low values, earning per share, and a time series graph of high/low values over the last month. The stock series app also provides a description of the stock selected, allowing users to learn more about the companies background and purpose. If users are curious about learning more, there is a news feed section with recent news articles relating to the selected stock.
+
+Overall, the stock series app is a great resource for users with limited and expansive stock knowledge to learn more about the S&P500 stocks.
+
 ### Wireframe and React Componenet Hierarchy
 
 - [Wireframe](https://res.cloudinary.com/dhwx7jnjx/image/upload/v1668543047/FullSizeRender_vyj6lu.jpg)
@@ -47,8 +53,14 @@
 | Graph            | M        | 2 hours        | 1 hour        | 1 hour      |
 | Articles         | M        | 2 hours        | 1 hour        | 1 hour      |
 | Key data         | H        | 3 hours        | 3 hours       | 3 hours     |
+### Additional Libraries
+
+- Axios 
+- RevCharts
 
 ### Code Snippet:
+
+<YAxis type="number" domain={[0, (dataMax) => Math.round((dataMax) + 50)]} allowDataOverflow={false}/>
 
 ### Issues and Resolutions:
 
@@ -72,3 +84,7 @@ Resolution: Make a conditional to display only if there is data for the specific
 
 Error: Error in console: "Uncaught (in promise) TypeError: Cannot read properties of undefined (reading '2022-11-09') at getValues" on KeyData.
 Resolution: 
+
+### Future Plans:
+- Include a type search bar
+- Include 
