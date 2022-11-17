@@ -9,13 +9,13 @@ function SymbolSearch (props) {
         props.graph(e.target.value)
         }
     return (
-        <div className='Symbol-search'>
-            <form className='Symbol-form'>
-                <select onChange={handleChange} className='Symbol-drop'>
+        <div className="Symbol-search">
+            <form className="Symbol-form">
+                <select onChange={handleChange} className="Symbol-drop">
                     <option>Select a company:</option>
                     {data.map((tickerName) => {
                     return (
-                        <option value={tickerName.Symbol} className='Symbol-option'>{tickerName.Description} | {tickerName.Symbol}</option>
+                        <option value={tickerName.Symbol} className="Symbol-option">{tickerName.Description} | {tickerName.Symbol}</option>
                     )
                     })}
                 </select>
