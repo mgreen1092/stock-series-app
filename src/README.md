@@ -87,4 +87,5 @@ Resolution:
 
 ### Future Plans:
 - Include a type search bar
-- Include 
+- Include temporary data for the home screen so it isn't blank when you first arrive
+- Improve styling
