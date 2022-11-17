@@ -2,7 +2,7 @@
 
 ### Description
 
-Stock Series is a user friendly app that displays data on the S&P 500. Users can learn about the companies stock performance including the high/low value, volume, 52 week high/low values, earning per share, and a time series graph of high/low values over the last month. The stock series app also provides a description of the stock selected, allowing users to learn more about the companies background and purpose. If users are curious about learning more, there is a news feed section with recent news articles relating to the selected stock.
+Stock data can be overwhelming and confusing. Stock Series is a user friendly app that displays key data on the S&P 500 stocks. Users can learn about the companies stock performance including the high/low value, volume, 52 week high/low values, earning per share, and a time series graph of high/low values over the last month. The Stock Series app also provides a description of the stock selected, allowing users to learn more about the companies background and purpose. If users are curious about learning more, Stock Series offers a news feed section with recent news articles relating to the selected stock and a link to the direct article.
 
 Overall, the stock series app is a great resource for users with limited and expansive stock knowledge to learn more about the S&P500 stocks.
 

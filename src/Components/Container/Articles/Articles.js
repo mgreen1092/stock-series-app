@@ -17,7 +17,7 @@ function Articles (props) {
                                     <p><span id='Font'>Date:</span> {article.time_published.split('T')[0].slice(0, 4)}-{article.time_published.split('T')[0].slice(4, 6)}-{article.time_published.split('T')[0].slice(6, 8)}</p>
                                 </div>
                                 <div className='Article-summary'>
-                                    <p><span id='Font'>Summary:</span> {article.summary}</p>
+                                    <p><a href={article.url}><span id='Font'>Summary:</span> {article.summary}</a></p>
                                 </div>
                             </div>
                         </div>
