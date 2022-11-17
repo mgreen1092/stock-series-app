@@ -1,7 +1,6 @@
 import React from "react";
 import './SymbolSearch.css'
 import data from '../data'
-import tickerName from "../data";
 
 function SymbolSearch (props) {
     const handleChange = (e) => {
@@ -10,7 +9,6 @@ function SymbolSearch (props) {
         props.getNewsArticles(e.target.value)
         props.graph(e.target.value)
         }
-        console.log(data)
     return (
         <div className='Symbol-search'>
             <form className='Symbol-form2'>

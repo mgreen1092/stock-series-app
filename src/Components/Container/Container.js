@@ -12,13 +12,10 @@ function Container () {
     const [keyData, setKeyData] = useState({})
     const [articles, setArticles] = useState([])
     const [graphData, setGraphData] = useState([])
-    function getKeyData (key) {
-        console.log(key)
-        //need to interpolate the symbol name selected - where IBM is now
+    function getKeyData (key) {    
         axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${key}&apikey=L9CIXKF2CPVF19PV`).then((response) => {
-            console.log(response.data)
             if (response.data.Note) {
-                alert('Too many calls')
+                alert('Please wait 1 minute!')
             } else if (response.data === {}) {
                 alert('No data')
             }
@@ -29,7 +26,6 @@ function Container () {
     console.log(keyData)
     function getNewsArticles (key) {
         axios.get(`https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=${key}&topics=technology&apikey=L9CIXKF2CPVF19PV.`).then((response) => {
-            console.log(response.data)
             setArticles(response.data.feed)
         })
         }
@@ -39,7 +35,6 @@ function Container () {
             setGraphData(response.data.values.reverse())
         })
     }
-    console.log(graphData)
     console.log(articles, 'articles')
     return (
         <div>

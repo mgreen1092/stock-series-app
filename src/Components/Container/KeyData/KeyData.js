@@ -4,7 +4,6 @@ import './KeyData.css'
 
 
 function KeyData ({keyData, setKeyData, setGraphData, graphData}) {
-    console.log('-------------------')
     useEffect(() => {
         async function getValues () {
         let date = new Date()
