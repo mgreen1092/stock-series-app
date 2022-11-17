@@ -7,9 +7,11 @@
 }
 .Nav-title {
     margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font: inherit;
     color: white;
     font-weight: bold;
+    font-size: 40px;
+    font-family: 'Candal', sans-serif;
 }

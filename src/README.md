@@ -65,7 +65,10 @@ Error: Graph not adjusting for certain company high/low values on the y-axis.
 Resolution: I needed to add a domain and used Math.random() to get a whole number.
 
 Error: Date of news article is in the incorrect format.
-Resolution:
+Resolution: I tried to use .toLocaleDateString to the date section of the articles, but I kept on getting an error that .toLocaleDateString is not an object. As a work around, I trimmed the date and inserted hyphens.
 
 Error: Some stocks/companies don't have news articles available in the data.
 Resolution: Make a conditional to display only if there is data for the specific stock/company.
+
+Error: Error in console: "Uncaught (in promise) TypeError: Cannot read properties of undefined (reading '2022-11-09') at getValues" on KeyData.
+Resolution: 
