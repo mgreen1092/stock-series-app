@@ -4,14 +4,14 @@ body {
 .Data-section {
     display: flex;
 }
-.KeyData-Graph {
+.KeyData-graph {
     display: flex;
     flex-direction: row;
 }
-.KeyData {
+.KeyData-div {
     flex-direction: row;
 }
-.Graph {
+.Graph-div {
     margin-top: 100px;
     margin-right: 40px;
 }
