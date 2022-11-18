@@ -106,5 +106,5 @@ Overall, the stock series app is a great resource for users with limited and exp
 - Improve styling
   - add rotating banner of stock tickers
   
-### Reconrding Link
+### Recording Link
 https://youtu.be/mXofhgm3mTs
