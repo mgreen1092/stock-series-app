@@ -1,7 +1,7 @@
 .Symbol-search {
     display: flex;
     flex-direction: column;
-    background-color: gray;
+    background-color: #2e2e2e;
 }
 .Symbol-form {
     margin: 0 auto;

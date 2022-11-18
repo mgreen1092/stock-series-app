@@ -5,11 +5,11 @@
 .Container {
     margin-left: 50px;
     margin-right: 50px;
-    border: 2px solid rgb(0, 144, 186);
+    border: 2px solid #2e2e2e;
     border-radius: 10px;
     margin-bottom: 20px;
     flex-wrap: wrap;
-    box-shadow: 7px 7px rgb(0, 144, 186);
+    box-shadow: 7px 7px #2e2e2e;
     transition: all .4s ease-in-out; 
 }
 .Container:hover { 

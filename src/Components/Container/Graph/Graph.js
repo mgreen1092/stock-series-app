@@ -7,10 +7,12 @@ import {
     CartesianGrid,
     Tooltip,
     Legend,
+    ResponsiveContainer,
   } from "recharts";
 
 function Graph (props) {
     return (
+        <ResponsiveContainer width="100%" height={400}>
             <LineChart
                 width={800}
                 height={400}
@@ -40,6 +42,7 @@ function Graph (props) {
                     activeDot={{ r: 4 }}
                 />
             </LineChart>
+            </ResponsiveContainer>
       );
 }
 
