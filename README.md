@@ -105,3 +105,6 @@ Overall, the stock series app is a great resource for users with limited and exp
 - Have a rounded value on the y-axis ending in 0 or 5
 - Improve styling
   - add rotating banner of stock tickers
+  
+### Reconrding Link
+https://youtu.be/mXofhgm3mTs
